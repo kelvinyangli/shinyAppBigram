@@ -14,21 +14,8 @@
 
 #
 
-
-
 library(shiny)
-
-library(DT) # data table format for shiny
-
-library(readxl) # read excel files
-
-library(dplyr) # data wrangling, including filter out missing value
-
-library(tidytext)
-
-library(ggplot2)
-
-library(tidyr)
+source("library.R")
 
 
 ui <- fluidPage(
@@ -374,7 +361,7 @@ server <- function(input, output) {
 }
 
 
-# increase the max upload file size 
+# increase the max upload file size
 options(shiny.maxRequestSize = 100 * 1024 ^ 2)
 
 shinyApp(ui, server)
